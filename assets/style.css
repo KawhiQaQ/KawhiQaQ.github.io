@@ -465,3 +465,6 @@ html[data-language="zh"] .profile .profile-school{font-size:14px}
 @media(min-width:761px) and (max-width:1200px){.header-inner{gap:14px}nav{gap:15px}nav a{font-size:13px}}
 @media(max-width:760px){.language-switch{position:absolute;right:22px;top:17px}.language-switch button{padding:4px 8px}}
 html[data-language="zh"] .education-summary span{white-space:nowrap}
+
+/* Keep the portrait centered on the face and upper body inside the square. */
+.profile .profile-photo{display:block;object-fit:cover;object-position:50% 40%}
