@@ -55,7 +55,10 @@
       return {year, annual, parts};
     });
     const label = selected === 'all' ? 'All contributions' : active[0].label;
-    card.querySelector('.contribution-view-title').textContent = label;
+    const heading = card.querySelector('.contribution-view-title');
+    const chinese = document.documentElement.dataset.language === 'zh';
+    heading.textContent = chinese ? (selected === 'all' ? '全部成果' : tabs.find(tab => tab.dataset.category === selected).textContent) : label;
+    heading.lang = chinese ? 'zh-CN' : 'en';
     card.querySelector('.contribution-total strong').textContent = records.length;
     const legend = card.querySelector('.contribution-legend');
     legend.replaceChildren(...active.map(item => {
@@ -212,5 +215,6 @@
     const width = Math.round(entries[0].contentRect.width);
     if (width !== lastWidth) { lastWidth = width; draw(); }
   }).observe(plot);
+  document.addEventListener('homepage-language-change', draw);
   readItems();
 })();

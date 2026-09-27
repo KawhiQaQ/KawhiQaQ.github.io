@@ -22,4 +22,4 @@ Publish the `main` branch from `/ (root)`. The `.nojekyll` file enables direct s
 
 ## Language switch
 
-Use the header’s EN / 中文 control. Only the profile, About (including research interests and News), and Education are translated; other sections retain their content. Chinese translations are in `assets/language.js`; English copy remains in `index.html`. The choice is remembered locally. Share `?lang=zh` or `?lang=en` to select a language explicitly.
+Use the header’s EN / 中文 control. The profile, About (including research interests and News), and Education are translated, along with all section headings, subsection headings, navigation labels, and chart tabs. Entries in the remaining sections retain their content. Chinese translations are in `assets/language.js`; English copy remains in `index.html`. The choice is remembered locally. Share `?lang=zh` or `?lang=en` to select a language explicitly.

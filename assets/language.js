@@ -2,12 +2,33 @@
   const switcher = document.querySelector('.language-switch');
   if (!switcher) return;
 
-  // Only the profile, About and Education are bilingual. All other sections
-  // retain their original content and live interaction state.
+  // Translate the profile, About, Education and section headings. Entries in
+  // the remaining sections retain their content and live interaction state.
   const chinese = {
     '.skip-link': '跳至正文',
     'nav a[href="#about"]': '关于我',
     'nav a[href="#education"]': '教育经历',
+    'nav a[href="#publications"]': '学术论文',
+    'nav a[href="#projects"]': '代码项目',
+    'nav a[href="#research"]': '知识产权',
+    'nav a[href="#awards"]': '奖项与荣誉',
+    'nav .nav-cv': '简历 <span aria-hidden="true">↗</span>',
+    '#publications-title': '学术论文',
+    '#conference-papers-heading': '会议论文',
+    '#journal-papers-heading': '期刊论文',
+    '#projects-title': '代码项目',
+    '#research-title': '知识产权',
+    '#intellectual-property-heading': '专利与软件著作权',
+    '#research-projects-heading': '科研项目',
+    '#awards-title': '奖项与荣誉',
+    '#competition-awards-heading': '竞赛奖项',
+    '#personal-honors-heading': '个人荣誉',
+    '#contributions-title': '年度成果统计',
+    '#contribution-tab-all': '汇总',
+    '#contribution-tab-publications': '学术论文',
+    '#contribution-tab-projects': '代码项目',
+    '#contribution-tab-research': '知识产权',
+    '#contribution-tab-awards': '奖项与荣誉',
     '.profile-field': 'MPhil 研究生',
     '.profile .school-line': '香港科技大学',
     '.profile .school-campus': '（广州）',
@@ -94,7 +115,10 @@
     if (!['en', 'zh'].includes(next)) next = 'en';
     if (next === language) return;
     language = next;
-    for (const entry of entries) entry.element.innerHTML = entry[next];
+    for (const entry of entries) {
+      entry.element.innerHTML = entry[next];
+      entry.element.lang = next === 'zh' ? 'zh-CN' : 'en';
+    }
     document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
     document.documentElement.dataset.language = next;
     for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.language === next));
@@ -106,6 +130,7 @@
       try { history.replaceState(null, '', url); } catch (_) { /* file:// previews still switch. */ }
     }
     window.dispatchEvent(new Event('resize'));
+    document.dispatchEvent(new Event('homepage-language-change'));
   }
   let saved;
   try { saved = localStorage.getItem('homepage-language'); } catch (_) { /* Use English. */ }
