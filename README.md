@@ -19,3 +19,7 @@ Run `python3 -m http.server 8766 --bind 127.0.0.1` in this directory, then open 
 ## GitHub Pages
 
 Publish the `main` branch from `/ (root)`. The `.nojekyll` file enables direct static serving.
+
+## Language switch
+
+Use the header’s EN / 中文 control. Only the profile, About (including research interests and News), and Education are translated; other sections retain their content. Chinese translations are in `assets/language.js`; English copy remains in `index.html`. The choice is remembered locally. Share `?lang=zh` or `?lang=en` to select a language explicitly.
