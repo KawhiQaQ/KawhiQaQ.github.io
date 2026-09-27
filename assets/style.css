@@ -466,5 +466,6 @@ html[data-language="zh"] .profile .profile-school{font-size:14px}
 @media(max-width:760px){.language-switch{position:absolute;right:22px;top:17px}.language-switch button{padding:4px 8px}}
 html[data-language="zh"] .education-summary span{white-space:nowrap}
 
-/* Keep the portrait centered on the face and upper body inside the square. */
-.profile .profile-photo{display:block;object-fit:cover;object-position:50% 40%}
+/* Zoom the portrait within its existing rounded frame. */
+.profile .profile-photo{display:block;overflow:hidden}
+.profile .profile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.25);transform-origin:50% 40%}
