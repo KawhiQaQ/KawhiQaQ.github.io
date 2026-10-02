@@ -239,3 +239,26 @@ numberItems(document.getElementById('projects'), '.project-card', '.project-copy
 document.querySelectorAll('#research .research-group, #awards .award-group').forEach(group => {
   numberItems(group, '.record-list > li', 'h4');
 });
+
+// Start silent demos when visible, and retain an explicit pause by the visitor.
+document.querySelectorAll('.project-video video[data-autoplay]').forEach(video => {
+  let inView = false;
+  let userPaused = false;
+  video.muted = true;
+  const sync = () => {
+    if (inView && !document.hidden && !userPaused) {
+      video.play().catch(() => { /* Native controls remain available if autoplay is blocked. */ });
+    } else {
+      video.pause();
+    }
+  };
+  video.addEventListener('pause', () => {
+    if (inView && !document.hidden) userPaused = true;
+  });
+  video.addEventListener('play', () => { userPaused = false; });
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+    sync();
+  }, {threshold: 0.25}).observe(video);
+  document.addEventListener('visibilitychange', sync);
+});
