@@ -477,3 +477,7 @@ html[data-language="zh"] .education-summary span{white-space:nowrap}
 .wordmark-detective:hover .detective-lens{transform:translate(1px,-1px) rotate(-8deg)}
 @media(max-width:760px){.wordmark-detective{width:38px;height:34px}.wordmark-detective svg{width:36px;height:36px}}
 @media(prefers-reduced-motion:reduce){.detective-lens{transition:none}.wordmark-detective:hover .detective-lens{transform:none}}
+
+/* Native playback keeps project demos usable inline and in full screen. */
+.project-video{border-bottom:1px solid var(--line);background:#151515}
+.project-video video{display:block;width:100%;aspect-ratio:1920/915;object-fit:contain;background:#151515}

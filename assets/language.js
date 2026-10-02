@@ -74,7 +74,7 @@
     'contest-voiceprint': '在讯飞 AI 算法赛「声纹迷雾：复杂场景说话人确认挑战赛」中获得<strong>第三名（国际排名 3/346）</strong>。',
     'paper-mff-net': '论文 <strong>MFF-Net</strong> 在线发表于 Expert Systems with Applications（ESWA）。',
     'contest-hyena': '在讯飞 AI 算法赛「野生鬣狗个体识别挑战赛」中获得<strong>第五名（国际排名 5/127）</strong>。',
-    'contest-speaker': '在讯飞 AI 算法赛「角色分离转写挑战赛」中取得<strong>国际前三名</strong>。',
+    'contest-speaker': '在讯飞 AI 算法赛「角色分离转写挑战赛」中获得<strong>第二名（国际排名 2/266）</strong>。',
     'contest-substation': '在讯飞 AI 算法赛「高分辨率遥感影像变电站识别挑战赛」中获得<strong>第七名（国际排名 7/1465）</strong>。',
     'contest-multilingual': '在讯飞 AI 算法赛「受限场景多语言识别挑战赛」中获得<strong>第十名（国际排名 10/245）</strong>。',
     'contest-ptcg': '在 Kaggle 宝可梦 PTCG AI 对战模拟挑战赛中获得<strong>铜牌（国际排名 438/6807）</strong>。',
