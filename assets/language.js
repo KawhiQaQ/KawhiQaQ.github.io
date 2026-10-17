@@ -14,7 +14,6 @@
     'nav a[href="#awards"]': '奖项与荣誉',
     'nav .nav-cv': '简历 <span aria-hidden="true">↗</span>',
     '#publications-title': '学术论文',
-    '#preprint-papers-heading': '预印本论文',
     '#conference-papers-heading': '会议论文',
     '#journal-papers-heading': '期刊论文',
     '#projects-title': '代码项目',
