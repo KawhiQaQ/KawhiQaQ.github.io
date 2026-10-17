@@ -14,6 +14,7 @@
     'nav a[href="#awards"]': '奖项与荣誉',
     'nav .nav-cv': '简历 <span aria-hidden="true">↗</span>',
     '#publications-title': '学术论文',
+    '#preprint-papers-heading': '预印本论文',
     '#conference-papers-heading': '会议论文',
     '#journal-papers-heading': '期刊论文',
     '#projects-title': '代码项目',
@@ -71,6 +72,7 @@
   };
 
   const news = {
+    'paper-cube': '预印本 <strong>CUBE</strong> 已发布于 arXiv，目前正在审稿中。',
     'contest-voiceprint': '在讯飞 AI 算法赛「声纹迷雾：复杂场景说话人确认挑战赛」中获得<strong>第三名（国际排名 3/346）</strong>。',
     'paper-mff-net': '论文 <strong>MFF-Net</strong> 在线发表于 Expert Systems with Applications（ESWA）。',
     'contest-hyena': '在讯飞 AI 算法赛「野生鬣狗个体识别挑战赛」中获得<strong>第五名（国际排名 5/127）</strong>。',
